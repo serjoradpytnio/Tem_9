@@ -1,6 +1,6 @@
 import unittest
 from circle import circle_area
-from cmath import pi
+from math import pi
 
 class TestCircleArea(unittest.TestCase):
     def test_area(self):
@@ -12,3 +12,10 @@ class TestCircleArea(unittest.TestCase):
     def test_values(self):
         self.assertRaises(ValueError, circle_area, -2)
         self.assertRaises(ValueError, circle_area, -1)
+
+    def test_type(self):
+        self.assertRaises(TypeError, circle_area, 5+2j)
+        self.assertRaises(TypeError, circle_area, 'five')
+        self.assertRaises(TypeError, circle_area, [16, 22])
+        self.assertRaises(TypeError, circle_area, [42])
+        self.assertRaises(TypeError, circle_area, True)
