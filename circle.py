@@ -3,8 +3,8 @@ from math import pi
 def circle_area(radius):
     if type(radius) not in [int, float]:
         raise TypeError("Радиус должен быть неотрицательным вещественным числом на")
-    if radius < 0:
-        raise ValueError("Радиус не может быть отрицательным")
+    #if radius < 0:
+        #raise ValueError("Радиус не может быть отрицательным")
     return pi*radius**2
 
 
